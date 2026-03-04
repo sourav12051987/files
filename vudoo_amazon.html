@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vudoo Embed</title>
+  <style>
+    :root {
+      --w: 300px;      /* base width */
+      --ratio: 300/600;/* width/height */
+    }
+
+    body {
+      margin: 0;
+      padding: 24px;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: #0b1220;
+      color: #e5e7eb;
+      display: grid;
+      place-items: center;
+      min-height: 100vh;
+    }
+
+    .card {
+      width: min(var(--w), 100%);
+      border-radius: 16px;
+      overflow: hidden;
+      background: rgba(255,255,255,0.06);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+      border: 1px solid rgba(255,255,255,0.10);
+    }
+
+    .embed {
+      width: 100%;
+      aspect-ratio: var(--ratio);
+      background: #000;
+      position: relative;
+    }
+
+    .embed iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+
+    .caption {
+      padding: 10px 12px;
+      font-size: 13px;
+      opacity: 0.85;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .badge {
+      font-size: 12px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(59,130,246,0.18);
+      border: 1px solid rgba(59,130,246,0.35);
+      white-space: nowrap;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="card" role="group" aria-label="Interactive ad embed">
+    <div class="embed">
+      <iframe
+        id="vudoo-iframe-14442051799"
+        title="Amazon Echo Ad (1)"
+        src="https://matt-us.vudoo.io/embed/14442051799?tag_id=13787590254&scale_to_fit=0&autoplay=1&inline=0"
+        allow="autoplay; fullscreen; payment; encrypted-media *;"
+        loading="lazy"
+        referrerpolicy="strict-origin-when-cross-origin"
+      ></iframe>
+    </div>
+
+    <div class="caption">
+      <span>Vudoo Interactive Embed</span>
+      <span class="badge">300×600</span>
+    </div>
+  </div>
+</body>
+</html>
